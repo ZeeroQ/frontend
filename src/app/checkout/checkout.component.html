@@ -152,9 +152,17 @@
             </mat-grid-list>
         </mat-card>
         <div style="text-align: center;">
-          <button mat-raised-button color="primary" (click)="placeorder()"> 
-              Place Order  <mat-icon>done</mat-icon>
-            </button>
+          <button mat-raised-button color="primary" (click) = "clickEvent()">GENARATE QR CODE</button>
+          <div *ngIf = "!isTrue">
+              <ngx-qrcode qrc-element-type="img" [qrc-value]="qrcode"></ngx-qrcode>
+              <button mat-raised-button color="primary" (click) = "saveQRCode()">Save QR Code</button>
+              <div *ngIf = "!isQRCode">
+                  <button mat-raised-button color="primary" (click)="placeorder()"> 
+                  Place Order  <mat-icon>done</mat-icon>
+                  </button>
+              </div>
+          </div>
+          
         </div>
     </mat-step>
   </mat-horizontal-stepper>
