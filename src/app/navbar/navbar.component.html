@@ -1,0 +1,14 @@
+<mat-toolbar style="background-color: indigo;color: white; font: bold">
+    <mat-toolbar-row>
+      <span>Shopping Gadgets</span>
+      <span class="example-spacer"></span>
+      <button mat-button *ngIf="loginservice.isAuthenticated() && loginservice.isAdmin()" routerLink="/dashboard">Dashboard</button>
+      <button mat-button *ngIf="loginservice.isAuthenticated() && loginservice.isAdmin()" routerLink="/userslist">Users</button>
+      <button mat-button *ngIf="loginservice.isAuthenticated() && !loginservice.isAdmin()" routerLink="/user">Dashboard</button>
+      <button mat-button *ngIf="loginservice.isAuthenticated()" routerLink="/account">Account</button>
+      <button mat-button *ngIf="loginservice.isAuthenticated() && !loginservice.isAdmin()" routerLink="/myorders">My Cart</button>
+      <button mat-button *ngIf="loginservice.isAuthenticated() && !loginservice.isAdmin()" routerLink="/userorders">My Orders</button>
+      <button mat-button *ngIf="loginservice.isAuthenticated()" (click)="loginservice.logout()">Logout</button>
+      <button mat-button *ngIf="!loginservice.isAuthenticated()" routerLink="/login">Login/Register</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
