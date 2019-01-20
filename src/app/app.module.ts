@@ -30,6 +30,7 @@ import { AuthService } from './services/authentication/auth.service';
 import { AuthInterceptor } from './services/interceptors/auth.interceptor';
 import { UserOrdersComponent } from './user-orders/user-orders.component';
 import { UsersListComponent } from './users-list/users-list.component';
+import {NgxQRCodeModule} from 'ngx-qrcode2';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { UsersListComponent } from './users-list/users-list.component';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxQRCodeModule
   ],
   providers: [
     LoginService,
