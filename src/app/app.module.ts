@@ -1,5 +1,4 @@
 import { WelcomeComponent } from "./welcome/welcome.component";
-import { HomeComponent } from "./home/home.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -32,12 +31,14 @@ import { AuthService } from "./services/authentication/auth.service";
 import { AuthInterceptor } from "./services/interceptors/auth.interceptor";
 import { UserOrdersComponent } from "./user-orders/user-orders.component";
 import { UsersListComponent } from "./users-list/users-list.component";
+import {NgxQRCodeModule} from 'ngx-qrcode2';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
     WelcomeComponent,
     AppComponent,
-    HomeComponent,
     LoginComponent,
     DashboardComponent,
     NavbarComponent,
@@ -62,7 +63,9 @@ import { UsersListComponent } from "./users-list/users-list.component";
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxQRCodeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     LoginService,

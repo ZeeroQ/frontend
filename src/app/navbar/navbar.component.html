@@ -24,38 +24,38 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" *ngIf="loginservice.isAuthenticated() && loginservice.isAdmin()" routerLink="/dashboard">Dashboard
+        <a class="btn btn-dark" *ngIf="loginservice.isAuthenticated() && loginservice.isAdmin()" routerLink="/dashboard">Dashboard
           <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" *ngIf="loginservice.isAuthenticated() && loginservice.isAdmin()" routerLink="/userslist">Users
+        <a class="btn btn-dark" *ngIf="loginservice.isAuthenticated() && loginservice.isAdmin()" routerLink="/userslist">Users
           <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" *ngIf="loginservice.isAuthenticated() && !loginservice.isAdmin()" routerLink="/user">Dashboard
+        <a class="btn btn-dark" *ngIf="loginservice.isAuthenticated() && !loginservice.isAdmin()" routerLink="/user">Dashboard
           <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" *ngIf="loginservice.isAuthenticated()" routerLink="/account">Account
+        <a class="btn btn-dark" *ngIf="loginservice.isAuthenticated()" routerLink="/account">Account
           <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" *ngIf="loginservice.isAuthenticated() && !loginservice.isAdmin()" routerLink="/myorders">My
+        <a class="btn btn-dark" *ngIf="loginservice.isAuthenticated() && !loginservice.isAdmin()" routerLink="/myorders">My
           Cart
           <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" *ngIf="loginservice.isAuthenticated() && !loginservice.isAdmin()" routerLink="/userorders">My
+        <a class="btn btn-dark" *ngIf="loginservice.isAuthenticated() && !loginservice.isAdmin()" routerLink="/userorders">My
           Orders
           <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" *ngIf="loginservice.isAuthenticated()" (click)="loginservice.logout()" routerLink="/myorders">Log
+        <a class="btn btn-dark" *ngIf="loginservice.isAuthenticated()" (click)="loginservice.logout()" routerLink="/myorders">Log
           out
           <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" *ngIf="!loginservice.isAuthenticated()" routerLink="/login">Login
+        <a class="btn btn-dark" *ngIf="!loginservice.isAuthenticated()" routerLink="/login">Login
           <span class="sr-only">(current)</span></a>
       </li>
 

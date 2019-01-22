@@ -11,10 +11,10 @@
       {{ product.description }}
     </p>
     <span class="example-spacer"></span>
-    <p>Price: ${{ product.price }}</p>
+    <p>Price: Rs. {{ product.price }}.00</p>
   </mat-card-content>
 </mat-card>
 
-<button mat-fab color="primary" style="position: fixed; right: 10px;bottom: 10px;" (click)="oncreate()">
+<button mat-fab color="primary" style="position: fixed; right: 30px;bottom: 30px;" (click)="oncreate()">
   <mat-icon>add</mat-icon>
 </button>

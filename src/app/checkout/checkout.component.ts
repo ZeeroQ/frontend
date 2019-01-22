@@ -9,8 +9,6 @@ import swal from 'sweetalert2';
 import { NotificationService } from '../services/notification/notification.service';
 import { MatHorizontalStepper } from '@angular/material';
 import _ from 'underscore'
-
-
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -126,8 +124,6 @@ export class CheckoutComponent implements OnInit {
 
   isTrue :boolean = true;
   qrcode = "";
-  isQRCode : boolean = true;
-
   clickEvent(){
     if (this.isTrue == true){
       this.isTrue = false;
@@ -137,9 +133,6 @@ export class CheckoutComponent implements OnInit {
   }
 
   saveQRCode(){
-    if (this.isQRCode == true){
-      this.isQRCode = false;
-    }
+    
   }
-
 }
